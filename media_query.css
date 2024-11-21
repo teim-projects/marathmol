@@ -1,0 +1,211 @@
+@media (max-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+   
+    .logo img{
+        margin-left: 5px;
+        width: 100px;
+        height: 50px;
+    }
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .logo img {
+        width: 120px; /* Adjust the width for tablets */
+    }
+}
+
+/* Media query for laptops and larger screens */
+@media only screen and (min-width: 769px) {
+    .logo img {
+        width: 200px; /* Adjust the width for laptops and larger screens */
+    }
+}
+
+
+
+
+@media only screen and (max-width: 479px) {
+    /* Adjust styles for screens up to 400px width */
+
+    
+
+    
+    .social-icons .fa-brands {
+        width: 35px;
+        height: 40px;
+        font-size: 16px;
+        margin-right: 10px; /* Adjust margin */
+        margin-left: -5px;
+        background: gray; /* Modify the background color */
+        
+        
+        
+    }
+    .phone-number-top, .social-icons i{
+        font-size: 12px;
+    }
+
+    .phone-number-top {
+        margin-right: 10px; /* Adjust margin */
+        font-size: 12px;
+    }
+    .options-icon .line {
+        height: 0.1px; /* Adjust the height as needed */
+        width: 29px;
+    }
+    .order-now-button {
+        font-size: 20px; /* Adjust the font size as needed */
+        padding: 5px 10px; /* Adjust the padding as needed */
+        margin-top: 600px; /* Adjust the margin-top as needed */
+    }
+    .background-container{
+        background-size: 1100px ;
+        background-repeat: no-repeat;
+        margin-top: 1px;
+        background-size: 550px 600px;
+    
+       
+    }
+}
+
+@media (max-width: 700px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        flex-basis: 100%;
+        margin-bottom: 20px; /* Adjust spacing between columns */
+    }
+}
+
+
+@media only screen and (max-width: 479px) {
+    .image-section {
+        flex-wrap: wrap;
+    }
+
+    .image-card {
+        width: 40%; /* Set the width to accommodate 2 cards in a row */
+        margin: 1%; /* Add margin for spacing between cards */
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .image-section {
+        flex-wrap: wrap;
+    }
+
+    .image-card {
+        width: 30%; /* Set the width to accommodate 2 cards in a row */
+        margin: 1%; /* Add margin for spacing between cards */
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .image-section {
+        flex-wrap: wrap;
+    }
+
+    .image-card {
+        width: 20%; /* Set the width to accommodate 3 cards in a row */
+        margin: 1%; /* Add margin for spacing between cards */
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .image-section {
+        flex-wrap: wrap;
+    }
+
+    .image-card {
+        width: 15.5%; /* Set the width to accommodate 4 cards in a row */
+        margin: 1%; /* Add margin for spacing between cards */
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .image-section {
+        flex-wrap: wrap;
+    }
+
+    .image-card {
+        width: 11.5%; /* Set the width to accommodate 4 cards in a row */
+        margin: 1%; /* Add margin for spacing between cards */
+    }
+}
+
+.menu .menu_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust as needed */
+}
+
+.menu .menu_card {
+    width: 20%; /* Adjust the width as needed */
+    margin: 1%; /* Add margin for spacing between cards */
+}
+
+@media (max-width: 479px) {
+    .menu .menu_box {
+        flex-direction: column;
+        align-items: center; /* Center cards for small screens */
+    }
+
+    .menu .menu_card {
+        width: 40%; /* Adjust the width for smaller screens */
+        margin: 2% auto; /* Adjust margin for smaller screens */
+    }
+
+    .menu h1 {
+        font-size: 30px; /* Adjust the font size for smaller screens */
+    }
+
+    .menu .menu_box .menu_card .menu_info h2 {
+        font-size: 18px; /* Adjust the font size for smaller screens */
+    }
+
+    .menu .menu_box .menu_card .menu_info h3 {
+        font-size: 16px; /* Adjust the font size for smaller screens */
+    }
+
+    .menu .menu_box .menu_card .menu_info .menu_btn {
+        margin: 10px 0; /* Adjust the margin for smaller screens */
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .menu .menu_card {
+        width: 48%; /* Adjust the width for medium screens */
+    }
+
+    .menu h1 {
+        font-size: 35px; /* Adjust the font size for smaller screens */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu .menu_card {
+        width: 48%; /* Adjust the width for larger screens */
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1099px) {
+    .menu .menu_card {
+        width: 31%; /* Adjust the width for laptop screens */
+    }
+}
+
+@media (min-width: 1100px) {
+    .menu .menu_card {
+        width: 21%; /* Adjust the width for larger screens */
+    }
+}

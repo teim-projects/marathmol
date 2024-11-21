@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/83e3f05aac.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media_query.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <script src="script.js"></script>
+    <script src="lightbox-plus-jquery.js"></script>
+
+    <title>मराठमोळं</title>
+    <style>
+        
+
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+
+        
+    
+        <div class="options-icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        
+        <div class="social-icons">
+            <!-- <i class="fa-solid fa-phone"></i>
+            <a href="tel:+918048890509" class="phone-number-top">+918048890509</a> -->
+            <a href="https://www.facebook.com/hotel.marathmol" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/hotel_marathmol__/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+           <a href="https://wa.me/9767665005" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> 
+           
+        </div>
+        <!-- <img src="static/images/Rainbow.png" alt=""> -->
+    </div>
+
+    
+
+    <div class="background-container" id="background-container">
+        <div class="background-image">
+            <div class="order-now-container">
+                <a href="menu.html"><button class="order-now-button">Menu Card</button></a>
+            </div>
+        </div>
+        <!-- <div class="text-overlay">
+            <span class="constant-text">Welcome to</span>
+            <span class="changing-text">Rainbow Hotel</span>
+        </div> -->
+    </div>
+<hr>
+    
+
+
+<div class="overlay" onclick="closeMenu()"></div>
+
+
+
+
+
+    
+
+<div class="options">
+    <div class="close-icon" onclick="closeMenu()">X</div>
+   
+    <a href="/">Home</a>
+    <a href="/menu.html">Digital Menu</a>
+    <ul class="sub-menu">
+        <li><a href="#" onclick="openMenuItem('Menu0',0)">Veg Starters</a></li>
+        <li><a href="#" onclick="openMenuItem('Menu1',1)">Nonveg Starters</a></li>
+        <li><a href="#" onclick="openMenuItem('Menu2',2)">Veg Main Course</a></li>
+        <li><a href="#" onclick="openMenuItem('Menu3',3)">Non veg Main Course</a></li>
+        <li><a href="#" onclick="openMenuItem('Menu4',4)">Marathmol Veg Thali</a></li>
+        <li><a href="#" onclick="openMenuItem('Menu5',5)">Marathmol Non Veg Thali</a></li>
+        <li><a href="#" onclick="openMenuItem('Menu6',6)">Roti </a></li>
+        <li><a href="#" onclick="openMenuItem('Menu7',7)">Rice</a></li>
+        <li><a href="#" onclick="openMenuItem('Menu8',8)">Veg Chinese </a></li>
+        <li><a href="#" onclick="openMenuItem('Menu9',9)">Nonveg Chinese</a></li>
+        <li><a href="#" onclick="openMenuItem('Menu10',10)">Sea food</a></li>
+        <li><a href="#" onclick="openMenuItem('Menu11',11)">Thai</a></li>
+        <li><a href="#" onclick="openMenuItem('Menu12',12)">Drinks</a></li>
+    </ul>
+    <!-- <a href="#">QR Code</a> -->
+    <!-- <a href="/signup">Account</a> -->
+</div>
+
+<div class="gallery-container">
+    <h1 class="responsive-title">Gallery</h1>
+    <div class="gallery-row">
+        <div class="gallery-img">
+            <a href="images/SOUP.jpg" data-lightbox="models">
+                <img src="images/SOUP.jpg" alt="Image 1">
+            </a>
+        </div>
+        <div class="gallery-img">
+            <a href="images/nonveg maincourse/CHICKEN HANDI  .jpeg" data-lightbox="models">
+                <img src="images/nonveg maincourse/CHICKEN HANDI  .jpeg" alt="Image 1">
+            </a>
+        </div>
+        <div class="gallery-img">
+            <a href="images/nonveg maincourse/MUTTON MASALA .jpeg" data-lightbox="models">
+                <img src="images/nonveg maincourse/MUTTON MASALA .jpeg" alt="Image 1">
+            </a>
+        </div>
+        <div class="gallery-img">
+            <a href="images/nonveg maincourse/CHICKEN ALANI   .jpeg" data-lightbox="models">
+                <img src="images/nonveg maincourse/CHICKEN ALANI   .jpeg" alt="Image 1">
+            </a>
+        </div>
+    </div>
+    <div class="gallery-row">
+        <div class="gallery-img">
+            <a href="images/Veg Starters/PANEER MOMOS.jpeg" data-lightbox="models">
+                <img src="images/Veg Starters/PANEER MOMOS.jpeg" alt="Image 1">
+            </a>
+        </div>
+        <div class="gallery-img">
+            <a href="images/Veg maincourse/PANEER MASALA.jpeg" data-lightbox="models">
+                <img src="images/Veg maincourse/PANEER MASALA.jpeg" alt="Image 1">
+            </a>
+        </div>
+        <div class="gallery-img">
+            <a href="images/Non veg starters/TANDOORI CHICKEN .jpeg" data-lightbox="models">
+                <img src="images/Non veg starters/TANDOORI CHICKEN .jpeg" alt="Image 1">
+            </a>
+        </div>
+        <div class="gallery-img">
+            <a href="images/INDIAN BREAD.jpg" data-lightbox="models">
+                <img src="images/INDIAN BREAD.jpg" alt="Image 1">
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="row">
+        <div class="col">
+            <h3>Hotel <div class="underline"><span></span></div></h3>
+                <a href="https://www.google.com/maps/place/Hotel+Marathmol/@18.488099,74.0739191,17z/data=!4m14!1m7!3m6!1s0x3bc2e79d838c851b:0x8b53d9d3bd199d65!2sHotel+Marathmol!8m2!3d18.488099!4d74.076494!16s%2Fg%2F11bwy_s5tf!3m5!1s0x3bc2e79d838c851b:0x8b53d9d3bd199d65!8m2!3d18.488099!4d74.076494!16s%2Fg%2F11bwy_s5tf?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: white; text-decoration: none;"> <p>Sortapwadi Near Purogami Madhyamik Vidyalaya, Tal. Haveli,, Solapur - Pune Hwy, Pune, Maharashtra 412202</p></a>
+            
+           
+        </div>
+        <div class="col">
+            <h3>Contact Us <div class="underline"><span></span></div></h3>
+            
+            <div class="contact-info">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+919767665005" class="phone-number-top" style="color: white;">+919767665005</a>
+            </div>
+                
+            <br>           
+
+            <div class="contact-info">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:hmarathmol@gmail.com" style="color: white; text-decoration: none;">hmarathmol@gmail.com</a>
+            </div>
+            
+        </div>
+        <div class="col">
+            <h3>Opening Hours <div class="underline"><span></span></div></h3>
+            <p>12:00  - 15:30 </p>
+            <p>19:00  - 22:30 </p>
+            <p>Happily Serving You Everyday !!!</p>
+            
+           
+            <br>
+           
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">&copy; 2024 Marathmol. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

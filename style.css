@@ -1,0 +1,619 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: black;
+    position: relative;
+}
+
+.background-container {
+    position: relative;
+    margin-top: 120px;
+    width: 100%;
+    height: 700px; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: background-image 2s, transform 3s;
+
+}
+
+/* Add this to your existing CSS file or style section */
+.order-now-container {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+.order-now-button {
+    padding: 10px 20px;
+    margin-top: 500px;
+    color: #000;
+    font-weight: 650;
+    border: solid 2px black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: background-color 0.2s;
+    position: relative;
+    background-image: linear-gradient(90deg, violet,  yellow, orange,cyan, red, pink, violet);
+    background-size: 200% 100%;
+    animation: buttonAnimation 8s linear infinite;
+}
+
+.order-now-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+    animation: buttonanimation 5s linear infinite;
+    background-image: linear-gradient(90deg, violet, yellow, orange, red,cyan, white, pink, violet);
+    background-size: 200% 100%;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+
+.options .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.logo {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    margin-bottom: -5px;
+    
+}
+
+.logo img {
+    width: 250px;
+    height: 90px;
+}
+
+.navbar {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.phone-number-top, .social-icons i {
+    margin-right: 8px;
+}
+
+.phone-number-top{
+    color: #25d366; /* Link color */
+    text-decoration: none;
+}
+
+.phone-number-top:hover{
+    color: #128C7E; /* Change color on hover */
+}
+
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.social-icons .fa-brands {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: black;
+    background: white;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.social-icons .fa-facebook-f:hover {
+    background-color: #1877f2;
+}
+
+.social-icons .fa-instagram:hover {
+    background: linear-gradient(to right, #8a3ab9, #cd486b, #fd9644, #feca57, #4b7bec);
+}
+
+.social-icons .fa-whatsapp:hover {
+    background-color: #25d366;
+}
+
+
+.options-icon { 
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    backdrop-filter: blur(5px); /* Apply a blur effect to the overlay */
+    z-index: 2; /* Ensure the overlay is on top of other elements */
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: black; /* Set the color of the menu icon lines */
+    margin: 6px 0;
+}
+
+.options {
+    overflow-y: scroll;
+    max-height: 85vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    padding-top: 60px;
+    transition: 0.8s;
+    z-index: 1000; /* Make sure the menu is above the overlay */
+    border-bottom-left-radius: 30px; /* Adjust the radius as needed */
+    border-bottom-right-radius: 50px;
+}
+
+.options a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color:white; /* Set the color of the menu links */
+}
+
+.options a:hover {
+    background-color: black; /* Set the background color on hover */
+}
+
+.options .sub-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.options .sub-menu li {
+    padding-left: 20px;
+}
+
+.options .sub-menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.options .sub-menu a:hover {
+    background-color: #333;
+}
+
+/* image section */
+
+.content-container {
+    margin-top: 100px; /* Adjust the value based on the height of your navbar */
+    overflow-x: hidden;
+}
+
+.image-section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.image-card {
+    text-align: center;
+    border: solid 3px black;
+    width: 200px;
+    background-color:  white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    border-radius: 15px 15px 0px 0px;
+    /* border-bottom-right-radius: 1px; */
+    /* border-top-left-radius: 1px; */
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+.image-card.clicked{
+   
+    background-color: #FF8C00;
+    border: solid 4px cyan;
+    
+}
+.image-card.clicked h3 {
+    color: black;
+
+}
+.image-card:hover {
+    /* Hover effect */
+    background-color: #FF8C00;
+}
+
+.image-card img {
+    width: 100%;
+    border: solid 1px white;
+    height: 150px; /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.image-card h3 {
+    margin-top: 5px;
+    font-size: 22px;
+    color: black;
+    overflow: hidden; /* Hide overflowing content within h3 */
+}
+
+#row1 {
+    top: 6px;
+}
+
+#row2 {
+    top: 30px; /* Adjust the top position based on the height of the images in the first row */
+}
+
+
+
+
+
+
+/* menu */
+.menu{
+    width: 100%;
+    padding-top: 5px;
+    margin-top: 5px;
+    display: none;
+}
+
+.menu h1{
+    margin-top: 80px;
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu h1 span{
+    color: #FF8C00;
+    margin-left: 15px;
+    font-family: oregon;
+}
+.veg{
+    margin-top: 80px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.veg{
+    color: #00b812;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.nonveg{
+    margin-top: 80px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.nonveg{
+    color: #FF0000;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.pizza{
+    margin-top: 80px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: black;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+.pasta{
+    margin-top: 80px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: black;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+
+.menu .menu_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.menu .menu_box .menu_card{
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.menu .menu_box .menu_card .menu_image{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.menu .menu_box .menu_card .menu_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.8s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img{
+    transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .menu_info h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #fac031;
+}
+.menu .menu_box .menu_card .menu_info p{
+    /* width: 30%; */
+    text-align: center;
+    margin: 15px auto 18px auto;
+    font-size: 18px;
+    color: black;
+    
+}
+
+
+
+.menu .menu_box .menu_card .menu_info h3{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: #000;
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn:hover{
+    background-color: #fac031;
+}
+
+
+
+footer{
+    z-index: 1000;
+    width: 100%;
+    /* position: absolute; */
+    bottom: 0;
+    background: linear-gradient(to right, #00093c ,#2d0b00);
+    color: #fff;
+    margin-top: 50px;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    border-bottom-right-radius: 125px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 20%;
+    padding: 10px;
+}
+
+.col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+.phone-number {
+    margin-top: 1px; 
+}
+
+.col ul li{
+    margin-left: -40px;
+    list-style: none;
+    margin-bottom: 12px;
+
+}
+.col ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.copyright {
+    text-align: center;
+}
+
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fac031;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@media(max-width:700px){
+    footer{
+        bottom: unset;
+    }
+    col{
+        flex-basis: 100%;
+    }
+    col:nth-child(2), .col:nth-child(3){
+        flex-basis: 100%;
+    }
+}
+
+
+
+
+.gallery-container {
+    max-width: 800px; /* Set a maximum width for the gallery */
+    margin: 0 auto; /* Center the gallery horizontally */
+    overflow: hidden; /* Ensure images don't overflow */
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Add some space between rows */
+}
+
+.gallery-img {
+    width: 23%; /* Set each image to occupy about 23% of the row */
+    position: relative;
+    padding-bottom: 23%; /* Maintain aspect ratio (1:1) */
+    animation: pulse 1.5s infinite alternate; 
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%; /* Fill the container while maintaining aspect ratio */
+    object-fit: cover; /* Ensure the entire image is visible */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.responsive-title {
+    font-size: 60px;
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  /* Media query for tablets and smaller screens */
+  @media (max-width: 768px) {
+    .responsive-title {
+      font-size: 40px;  /* Smaller font size for tablets */
+      padding-left: 10px;  /* Adjust padding */
+    }
+  }
+
+  /* Media query for mobile devices */
+  @media (max-width: 480px) {
+    .responsive-title {
+      font-size: 30px;  /* Even smaller font size for mobile */
+      padding-left: 5px;  /* Reduce padding further */
+    }
+  }
