@@ -246,7 +246,7 @@ body {
     background-color:  white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 15px 15px;
     /* border-bottom-right-radius: 1px; */
     /* border-top-left-radius: 1px; */
     overflow: hidden;
