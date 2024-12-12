@@ -19,6 +19,21 @@ function closeMenu() {
     menu.style.left = '-250px';
     overlay.style.display = 'none';
 }
+// Function to scroll to the top of the page
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Function to toggle the button's visibility based on scroll position
+window.onscroll = function() {
+    var button = document.getElementById("scrollButton");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.style.display = "block";  // Show the button when scrolled down
+    } else {
+        button.style.display = "none";  // Hide the button when at the top of the page
+    }
+};
+
 
 
 

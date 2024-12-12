@@ -25,35 +25,42 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
-.order-now-button {
-    padding: 10px 20px;
-    margin-top: 500px;
-    color: #000;
-    font-weight: 650;
-    border: solid 2px black;
-    border-radius: 10px;
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;  /* Distance from the bottom edge */
+    right: 20px;   /* Distance from the right edge */
+    width: 50px;
+    height: 50px;
+    background-color: #ff6b6b; /* Light red color */
+    border: none;
+    border-radius: 50%;  /* Circular button */
+    display: none;       /* Initially hidden */
+    justify-content: center; /* Center the content (arrow) */
+    align-items: center;     /* Center the content (arrow) */
     cursor: pointer;
-    font-size: 30px;
-    transition: background-color 0.2s;
-    position: relative;
-    background-image: linear-gradient(90deg, violet,  yellow, orange,cyan, red, pink, violet);
-    background-size: 200% 100%;
-    animation: buttonAnimation 8s linear infinite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+    transition: background-color 0.3s;
+    position: fixed;
 }
 
-.order-now-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    border-radius: 10px;
-    animation: buttonanimation 5s linear infinite;
-    background-image: linear-gradient(90deg, violet, yellow, orange, red,cyan, white, pink, violet);
-    background-size: 200% 100%;
+.scroll-to-top:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 12px solid white; /* Creates an upward arrow */
 }
+
+.scroll-to-top:hover {
+    background-color: #ff3b3b; /* Darker red on hover */
+}
+
+.scroll-to-top:focus {
+    outline: none; /* Remove outline when focused */
+}
+
 
 @keyframes buttonAnimation {
     0% {
@@ -380,12 +387,20 @@ body {
     grid-gap: 15px;
 }
 
-.menu .menu_box .menu_card{
+/* .menu .menu_box .menu_card{
     width: 325px;
-    height: 480px;
+    height: 450px;
     padding-top: 10px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+} */
+.menu .menu_box .menu_card{
+    width: auto;              /* Allow width to adjust automatically based on content */
+    height: auto;             /* Allow height to adjust automatically based on content */
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: block;           /* Ensure it's a block-level element */
 }
 
 .menu .menu_box .menu_card .menu_image{
