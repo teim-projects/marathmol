@@ -26,41 +26,78 @@ body {
     transform: translateX(-50%);
 }
 
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;  /* Distance from the bottom edge */
-    right: 20px;   /* Distance from the right edge */
-    width: 50px;
-    height: 50px;
-    background-color: #ff6b6b; /* Light red color */
-    border: none;
-    border-radius: 50%;  /* Circular button */
-    display: none;       /* Initially hidden */
-    justify-content: center; /* Center the content (arrow) */
-    align-items: center;     /* Center the content (arrow) */
+.scroll-to-top {     
+    position: fixed;     
+    bottom: 20px;  /* Distance from the bottom edge */     
+    right: 20px;   /* Distance from the right edge */     
+    width: 50px;     
+    height: 50px;     
+    background-color: #ff6b6b; /* Light red color */     
+    border: none;     
+    border-radius: 50%;  /* Circular button */     
+    display: flex;       /* Use flexbox for alignment */     
+    justify-content: center; /* Center horizontally */     
+    align-items: center; /* Center vertically */     
+    cursor: pointer;     
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */     
+    transition: background-color 0.3s;     
+    font-size: 18px; /* Size of the text */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* White text color */
+    text-align: center; /* Center the text horizontally */
+}  
+
+.scroll-to-top:before {     
+    content: "^";  /* Adds the "UP" text */     
+    font-size: 16px; /* Adjust text size if necessary */
+    color: white; /* Text color */
+}  
+
+.scroll-to-top:hover {     
+    background: linear-gradient(to right, #00093c ,#2d0b00);/* Darker red on hover */ 
+}  
+
+.scroll-to-top:focus {     
+    outline: none; /* Remove outline when focused */ 
+}  
+
+
+
+
+.order-now-container {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+.order-now-button {
+    padding: 10px 20px;
+    margin-top: 500px;
+    color: #000;
+    font-weight: 650;
+    border: solid 2px black;
+    border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
-    transition: background-color 0.3s;
-    position: fixed;
+    font-size: 30px;
+    transition: background-color 0.2s;
+    position: relative;
+    background-image: linear-gradient(90deg, violet,  yellow, orange,cyan, red, pink, violet);
+    background-size: 200% 100%;
+    animation: buttonAnimation 8s linear infinite;
 }
 
-.scroll-to-top:before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 12px solid white; /* Creates an upward arrow */
+.order-now-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+    animation: buttonanimation 5s linear infinite;
+    background-image: linear-gradient(90deg, violet, yellow, orange, red,cyan, white, pink, violet);
+    background-size: 200% 100%;
 }
-
-.scroll-to-top:hover {
-    background-color: #ff3b3b; /* Darker red on hover */
-}
-
-.scroll-to-top:focus {
-    outline: none; /* Remove outline when focused */
-}
-
 
 @keyframes buttonAnimation {
     0% {
